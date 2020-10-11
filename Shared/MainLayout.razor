@@ -1,0 +1,31 @@
+﻿@inherits LayoutComponentBase
+
+<div class="sidebar">
+    <NavMenu />
+</div>
+
+
+<div class="container-fluid bg-orvizar">
+    <div class="row top-bar">
+        <h1 class="center-button ml-5" > Orvizar tu sitio para aprender </h1>
+        <div class="user-info">
+            <a href="https://www.youtube.com/channel/UCpO7BGqaPLRlMoffNxTxw2A/featured" target="_blank"> <strong>Nuestros Videos </strong>  </a>
+            <span style="vertical-align:middle;margin:0px 10px"> </span>
+            <a href="https://www.youtube.com/channel/UCpO7BGqaPLRlMoffNxTxw2A/featured" target="_blank">
+                <img src=" /images/youtube.png" asp-append-version="true" width="40" style="vertical-align:middle;margin:0px 10px" />
+            </a>
+            <a href="https://www.instagram.com/orvizar/" target="_blank">
+                <img src=" /images/instagram.png" asp-append-version="true" width="40" style="vertical-align:middle;margin:0px 10px" />
+            </a>
+
+            <a href="https://www.facebook.com/orvizar/" target="_blank">
+                <img src=" /images/facebook.png" asp-append-version="true" width="40" style="vertical-align:middle;margin:0px 10px" />
+            </a>
+        </div>
+    </div>
+
+    <div class="content px-3">
+        @Body
+    </div>
+   
+</div>

@@ -1,0 +1,66 @@
+﻿@page "/Python"
+
+<Radzen.Blazor.RadzenCard>
+    <div class="row">
+        <img src="/images/Logo.png" asp-append-version="true" width="150" />
+        <h1 class="center-button py-3">   Curso de python</h1>
+    </div>
+
+</Radzen.Blazor.RadzenCard>
+
+
+<div class="content mt-2">
+    Sin duda <strong>python</strong> se ha convertido en uno de los lenguajes que mas popularidad ha ganado en los ultimos años,
+    no es de sorprenderse la cantidad de aplicaciones que hoy en dia podemos encontrar ...
+
+    <p>
+        En este tutorial haremos una breve introducción al entorno de programación de python así como las variables. También revisaremos comandos básicos que permiten la interacción del lenguaje de programación con el programador. También, expondremos en detalle como manipular los datos y ejecutar operaciones básicas.
+    </p>
+
+    <div class="center-button">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/9qWZd_PWKVA?start=5" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+    <p>
+        En este tutorial aprenderemos que son listas y como empezar a trabajar con los elementos en ellas. Las listas permiten almacenar paquetes de informacion en un solo lugar. Las listas son una de las herramientas más poderosas de Python de fácil entendimineto para los nuevos programadores. Las listas están ligadas a muchos conceptos importantes en la programación en Python.
+
+    </p>
+    <div class="center-button">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/_bP6_8_h67U?start=4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+    <p>
+
+        En este tutorial aprenderemos como iterar una lista para poder acceder a los elementos y manipularlos. Los ciclos FOR permiten tomar el mismo set de acciones para cada item de la lista. Finalmente, se aprenderá como trabajar eficientemente con listas de cualquier longitud que contienen variables de cualquier tipo.
+    </p>
+    <div class="center-button">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/_-P6Q2uq-PU?start=5" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+    <p>
+        La estructura de control IF permite que un programa ejecute unas instrucciones cuando se cumplan una condición u otro set de instrucciones cuando la condición no se cumple. En inglés la palabra IF significa SI para usarse como una estructura condicional.
+    </p>
+    <div class="center-button">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/P-67TiHnQX4?start=2" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+    <p>
+        El curso Completo aca :
+    </p>
+    <div class="center-button">
+
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?start=2&amp;list=PL6GZzVvsfrGE96QuTTsMFRLcYhdnvOiz3" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+</div>
+@code {
+    public List<string> ListVideos { get; set; } = new List<string>
+{
+      "https://www.youtube.com/embed/_ihdkS8jBvA",
+
+
+    };
+
+    public OrvizarWebPageServer.Data.PlayList PlayListType { get; set; } = Data.PlayList.Anaconda;
+    public int Id { get; set; } = 0;
+    public int ConvertFromPlayListToInt(OrvizarWebPageServer.Data.PlayList playList)
+    {
+        return (int)playList;
+    }
+
+}

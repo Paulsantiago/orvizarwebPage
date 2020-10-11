@@ -1,0 +1,54 @@
+﻿@page "/Stack/{Id:int}"
+
+@inject NavigationManager NavigationManager
+@using SharedFolder
+@inject OrvizarWebPageServer.Data.VideosDataService videosService
+@if (Elements is null)
+{
+    <h2> Loading ............</h2>
+}
+else
+{
+    <div>
+        <ul >
+            @foreach (var video in Elements.AllVideos)
+            {
+                <li>
+                        <iframe width="560" height="315" src="@video.Name" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="allowfullscreen"></iframe>
+                    <!--<div class="video-info">-->
+                        @*<span class="title"> Aqui es el titulo </span>*@
+                    <!--</div>-->
+
+                </li>
+
+            }
+
+        </ul>
+    </div>
+
+
+
+
+}
+
+
+
+@code
+{
+    [Parameter]
+    public int Id { get; set; }
+    public OrvizarWebPageServer.Data.PlayList types { get; set; }
+    private SourceElements Elements;
+
+    protected override async Task OnInitializedAsync()
+    {
+        types = (OrvizarWebPageServer.Data.PlayList)Id;
+
+        Elements = await videosService.GetVideosAsync(types);
+
+    }
+
+
+
+
+}

@@ -1,0 +1,41 @@
+﻿@page "/"
+@inject NavigationManager Navigation
+
+<EntryCard></EntryCard>
+<div class="container-fluid bg-white inside py-3" >
+
+    <h1>Bienvenido a un lugar para aprender</h1>
+    <p>
+        <strong>Orvizar </strong> es una pagina dedicada a proporcionar conocimiento y poder ayudar mas personas a desarrollar tecnologia
+        <strong>queremos llegar a soluciones de uso industrial</strong>. Un par de ingenieros decidieron compartir experiencias yu conocimientos
+        de manera que mas personas puedan acceder a esta informacion en espanol , ya que muchos de los lugares en los cuales encontramos la mayoria de informacion
+        esta en ingles, comprendemos la importancia del idioma ingles pero no queremos que ese sea un factor para que mas personas puedan aprender de
+        tecnologia , especialmente en latinoamerica.
+        Ahora que sabes un poco de nuestro proposito esperamos que te puedas aprender y que nos ayudes a seguir creciendo.
+
+    </p>
+
+    <SurveyPrompt Title="Como podemos hacer de nuestro sociedad algo mejor usando nuestros conocimientos ?" />
+</div>
+<h3 class="py-lg-2">
+    Visita nuestros cursos gratis :
+</h3>
+<div class="container-fluid">
+
+    <ul class="orvi-cards">
+        <li @onclick="@(()=> Navigation.NavigateTo("Anaconda"))" style=" background-image: url(images/anacondatrasn.png) "></li>
+        <li @onclick="@(()=> Navigation.NavigateTo("Python"))" style="  background-image: url(images/python1.png)"></li>
+        <li @onclick="@(()=> Navigation.NavigateTo("Matplotlib"))" style="background-image: url(images/matplotlib.png) "></li>
+        <li @onclick="@(()=> Navigation.NavigateTo("Pandas"))" style=" background-image: url(images/pandas1.png) "></li>
+        <li @onclick="@(()=> Navigation.NavigateTo("Tkinter"))" style=" background-image: url(images/tkinter.png) "></li>
+        <li @onclick="@(()=> Navigation.NavigateTo("Openvc"))" style=" background-image: url(images/opencvtrasn.png) "></li>
+    </ul>
+</div>
+@code {
+    string text = "Hi";
+    //public PlayList _type { get; set; }
+    private void NavegateToPage()
+    {
+        Navigation.NavigateTo("");
+    }
+}

@@ -1,0 +1,154 @@
+﻿@inject IJSRuntime jsRuntime
+
+<div class="top-row pl-3 navbar navbar-dark">
+    <a class="navbar-brand" href=""><img src=" /images/Logo.png" asp-append-version="true" width="100" /><strong>Orvizar</strong></a>
+    <button class="navbar-toggler" @onclick="ToggleNavMenu">
+        <span class="navbar-toggler-icon"> </span>
+    </button>
+</div>
+
+
+
+<div class="@NavMenuCssClass" @onclick="ToggleNavMenu">
+    <ul class="nav flex-column">
+        <li class="nav-item px-3">
+
+            <NavLink class="nav-link" href="" @onclick="ExpandSubMenuA">
+                <span><img src=" /images/pythonc.png" asp-append-version="true" width="30" /></span> <span class="px-3"> Python</span>
+            </NavLink>
+            @if (expandSubMenuA)
+            {
+                <ul class="nav flex-column">
+
+                    <li class="nav-item px-2">
+                        <NavLink class="nav-link" href="Anaconda">
+                            <span aria-hidden="true"><img src=" /images/anacondatrasn.png" asp-append-version="true" width="30" /></span>
+                            <span class="px-3"> Anaconda</span>
+                        </NavLink>
+                    </li>
+                    <li class="nav-item px-2">
+                        <NavLink class="nav-link" href="Python">
+                            <span aria-hidden="true"><img src=" /images/pythonins.png" asp-append-version="true" width="30" /></span>
+                            <span class="px-3"> Curso Gratis</span>
+                        </NavLink>
+                    </li>
+                    <li class="nav-item px-2">
+                        <NavLink class="nav-link" href="Matplotlib">
+                            <span aria-hidden="true"><img src=" /images/matplotlib2.png" asp-append-version="true" width="30" /></span>
+                            <span class="px-3"> Matplotlibs</span>
+                        </NavLink>
+                    </li>
+                    <li class="nav-item px-2">
+                        <NavLink class="nav-link" href="Pandas">
+                            <span aria-hidden="true"><img src=" /images/pandas1.png" asp-append-version="true" width="40" /></span>
+                            <span class="px-3"> Pandas</span>
+                        </NavLink>
+                    </li>
+                    <li class="nav-item px-2">
+                        <NavLink class="nav-link" href="Tkinter">
+                            <span aria-hidden="true"><img src=" /images/tkinter.png" asp-append-version="true" width="30" /></span>
+                            <span class="px-3"> Tkinter</span>
+                        </NavLink>
+                    </li>
+                </ul>
+
+            }
+        </li>
+        <li class="nav-item px-3">
+
+            <NavLink class="nav-link" href="" @onclick="ExpandSubMenuB">
+                <span><img src=" /images/visualStudio.png" asp-append-version="true" width="40" /></span> <span class="px-3"> C#</span>
+
+            </NavLink>
+            @if (expandSubMenuB)
+            {
+                <ul class="nav flex-column">
+
+                    <li class="nav-item px-2">
+                        <NavLink class="nav-link" href="Csharpbasico">
+                            <span aria-hidden="true"><img src=" /images/csharp3.png" asp-append-version="true" width="30" /></span>
+                            <span class="px-3"> Curso Basico</span>
+                        </NavLink>
+                    </li>
+                    <li class="nav-item px-2">
+                        <NavLink class="nav-link" href="Unity">
+                            <span aria-hidden="true"><img src=" /images/unity2.png" asp-append-version="true" width="30" /></span>
+                            <span class="px-3"> Curso Unity</span>
+                        </NavLink>
+                    </li>
+
+                </ul>
+            }
+        </li>
+        <li class="nav-item px-3">
+
+            <NavLink class="nav-link" href="" @onclick="@ExpandSubMenuC">
+                <span class="oi oi-script" aria-hidden="true"></span> <span class="px-3"> Avanzado</span>
+            </NavLink>
+            @if (expandSubMenuC)
+            {
+                <ul class="nav flex-column">
+
+                    <li class="nav-item px-2">
+                        <NavLink class="nav-link" href="Optimizacion">
+                            <span aria-hidden="true"><img src=" /images/algo1.png" asp-append-version="true" width="30" /></span>
+                            <span class="px-2"> Optimizacion</span>
+
+                        </NavLink>
+                    </li>
+                    <li class="nav-item px-2">
+                        <NavLink class="nav-link" href="Opencv">
+                            <span aria-hidden="true"><img src=" /images/opencvtrasn.png" asp-append-version="true" width="30" /></span>
+                            <span class="px-3"> Open CV</span>
+                        </NavLink>
+                    </li>
+
+                </ul>
+            }
+        </li>
+        <li class="nav-item px-3">
+
+            <NavLink class="nav-link" href="" @onclick="@NavigateToNewTab">
+                <span class="oi oi-comment-square" aria-hidden="true"></span> <span class="px-3"> Blog </span>
+            </NavLink>
+
+        </li>
+    </ul>
+</div>
+
+@code {
+    private bool collapseNavMenu = true;
+    private bool expandSubMenuA = false;
+    private bool expandSubMenuB = false;
+    private bool expandSubMenuC = false;
+    private string NavMenuCssClass => collapseNavMenu ? "collapse" : null;
+    public async Task NavigateToNewTab()
+    {
+        string url = "https://orvizarblog.blogspot.com/";
+     
+        await jsRuntime.InvokeAsync<object>("open", url, "_blank");
+    }
+    private void ExpandSubMenuA()
+    {
+        expandSubMenuA = !expandSubMenuA;
+        expandSubMenuB = false;
+        expandSubMenuC = false;
+    }
+    private void ExpandSubMenuB()
+    {
+        expandSubMenuB = !expandSubMenuB;
+        expandSubMenuA = false;
+        expandSubMenuC = false;
+    }
+    private void ExpandSubMenuC()
+    {
+        expandSubMenuC = !expandSubMenuC;
+        expandSubMenuB = false;
+        expandSubMenuA = false;
+    }
+
+    private void ToggleNavMenu()
+    {
+        collapseNavMenu = !collapseNavMenu;
+    }
+}

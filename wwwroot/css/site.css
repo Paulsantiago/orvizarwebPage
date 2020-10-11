@@ -1,0 +1,334 @@
+@import url('open-iconic/font/css/open-iconic-bootstrap.min.css');
+
+html, body {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+a, .btn-link {
+    color: #0366d6;
+}
+.btn-coverImage {
+    background-color: white;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.panel-menu {
+    background-color: red;
+
+}
+
+    .panel-menu .nav-item .navigation-menu .navigation-item-wrapper {
+        background-color: red;
+    }
+.user-info {
+    margin-left: auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+.top-bar {
+    height: 5rem;
+    background-image: linear-gradient(rgba(0,0,0,0.3) 0%, rgba(0,0,0,0.25) 25%, rgba(0,0,0,0) 70%);
+    background-color: rgb(192,0,0);
+    box-shadow: 0 1px 0px rgba(0,0,0,0.4);
+    color: white;
+    /*padding: 0 3rem;*/
+    position:center;
+    align-items: stretch;
+    /*,center;*/
+    /*top: 0;
+    right: 0;
+    left: 0;*/
+    /*width:100%;
+    left:0;
+    */display: flex;
+    z-index: 1030;
+}
+#expand {
+    width: 100%;
+    left: 0;
+}
+.inside {
+    
+    position:relative;
+    top: -50px;
+    left: 10px;
+    right: 10px;
+    bottom:0;
+}
+.center-button
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.content > iframe {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.info-bar {
+    height: 15rem;
+    background-color: rgb(192,0,0);
+    /*background-image: linear-gradient(rgba(0,0,0,0.3) 0%, rgba(0,0,0,0.25) 25%, rgba(0,0,0,0) 70%);*/
+    background-image: url(/images/wall1.jpg);
+    background-size: cover;
+    /*background-repeat: no-repeat;*/
+    display: flex;
+    align-items: stretch;
+    color: white;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.4);
+    padding: 0 3rem;
+    position: center,relative;
+    width: 100%;
+    /*top: 0;
+    right: 0;*/
+    left: 0;
+    z-index: 1030;
+}
+.logos{
+        background-image: url(/images/csharp1.jpg);
+    background-position:left;
+    padding-left: 20px;
+    height: 30px;
+    width:30px;
+    background-size:30px;
+}
+    .logos .sharp {
+    }
+.test {
+    flex-grow: 1;
+    overflow-y: auto;
+    background: linear-gradient(rgba(0,0,0,0) 40%, rgba(0,0,0,0.4) 80%);
+    padding: 1.5rem !important;
+}
+.colortest {
+    color: #fff;
+    background-color: #1b6ec2;
+    border-color: #1861ac;
+}
+
+
+
+.btn-primary {
+    color: #fff;
+    background-color: #1b6ec2;
+    border-color: #1861ac;
+}
+
+app {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.top-row {
+    height: 3.5rem;
+    display:  flex;
+    align-items: center;
+   
+}
+.bg-orvizar {
+    flex: 1;
+    overflow-y: auto;
+    background: linear-gradient(rgba(0,0,0,0) 40%, rgba(0,0,0,0.4) 80%);
+}
+.orvi-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 20rem);
+    grid-gap: 2rem;
+    justify-content: center;
+    padding-left: 0;
+}
+
+    .orvi-cards > li {
+        height: 10rem;
+        position: relative;
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-color: white;
+        border-radius: 0.5rem;
+        list-style-type: none;
+        box-shadow: 0 3px 4px rgba(0,0,0,0.4);
+        transition: 0.1s ease-out;
+    }
+
+        .orvi-cards > li:hover {
+            transform: scale(1.02);
+        }
+        .orvi-cards .py >li{
+            background-image: url(images/python2.jpg)
+        }
+
+
+.main {
+    flex: 1;
+    overflow-y: auto;
+    background: linear-gradient(rgba(0,0,0,0) 40%, rgba(0,0,0,0.4) 80%);
+    padding: 0.5rem !important;
+}
+
+    .main .top-row {
+        background-color: #f7f7f7;
+        border-bottom: 1px solid #d6d5d5;
+        justify-content:   center;
+    }
+
+        .main .top-row > a, .main .top-row .btn-link {
+            white-space: nowrap;
+            margin-left: 1.5rem;
+        }
+
+.main .top-row a:first-child {
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.sidebar {
+    background-image: linear-gradient(180deg, rgb(5, 39, 103) 0%, #3a0647 70%);
+}
+
+    .sidebar .top-row {
+        background-color: rgba(0,0,0,0.4);
+        height:auto;
+    }
+
+    .sidebar .navbar-brand {
+        font-size: 1.1rem;
+        background-image: url(../images/Logo.png);
+        background-position: left;
+    }
+
+    .sidebar .oi {
+        width: 2rem;
+        font-size: 1.1rem;
+        vertical-align: text-top;
+        top: -2px;
+    }
+
+    .sidebar .nav-item {
+        font-size: 0.9rem;
+        padding-bottom: 0.5rem;
+    }
+
+        .sidebar .nav-item:first-of-type {
+            padding-top: 1rem;
+        }
+
+        .sidebar .nav-item:last-of-type {
+            padding-bottom: 1rem;
+        }
+
+        .sidebar .nav-item a {
+            color: #d7d7d7;
+            border-radius: 4px;
+            height: 3rem;
+            display: flex;
+            align-items: center;
+            line-height: 3rem;
+        }
+
+            .sidebar .nav-item a.active {
+                background-color: rgba(255,255,255,0.25);
+                color: white;
+            }
+
+            .sidebar .nav-item a:hover {
+                background-color: rgba(255,255,255,0.1);
+                color: white;
+            }
+
+.content {
+    padding-top: 1.1rem;
+}
+
+.navbar-toggler {
+    background-color: rgba(255, 255, 255, 0.1);
+
+}
+
+.valid.modified:not([type=checkbox]) {
+    outline: 1px solid #26b050;
+}
+
+.invalid {
+    outline: 1px solid red;
+}
+
+.validation-message {
+    color: red;
+}
+
+#blazor-error-ui {
+    background: lightyellow;
+    bottom: 0;
+    box-shadow: 0 -1px 2px rgba(0, 0, 0, 0.2);
+    display: none;
+    left: 0;
+    padding: 0.6rem 1.25rem 0.7rem 1.25rem;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+}
+
+#blazor-error-ui .dismiss {
+    cursor: pointer;
+    position: absolute;
+    right: 0.75rem;
+    top: 0.5rem;
+}
+
+@media (max-width: 767.98px) {
+    .main .top-row:not(.auth) {
+        display: none;
+    }
+
+    .main .top-row.auth {
+        justify-content: space-between;
+    }
+
+    .main .top-row a, .main .top-row .btn-link {
+        margin-left: 0;
+    }
+}
+
+@media (min-width: 768px) {
+    app {
+        flex-direction: row;
+    }
+
+    .sidebar {
+        width: 250px;
+        height: 100vh;
+        position: sticky;
+        top: 0;
+    }
+
+    .main .top-row {
+        position: sticky;
+        top: 0;
+    }
+
+    .main > div {
+        padding-left: 2rem !important;
+        padding-right: 1.5rem !important;
+    }
+
+    .navbar-toggler {
+        display: none;
+        background-image : url(../images/Logo.png);
+        background-position:left;
+       
+    }
+
+    .sidebar .collapse {
+        /* Never collapse the sidebar for wide screens */
+        display: block;
+    }
+    .nav-item a.active::after{
+        content:"*";
+        margin-left:1em;
+    }
+}
