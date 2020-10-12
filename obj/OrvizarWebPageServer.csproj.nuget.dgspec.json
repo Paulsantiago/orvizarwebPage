@@ -1,23 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "D:\\source\\repos\\OrvizarWebPageServer\\OrvizarWebPageServer.csproj": {}
+    "D:\\01.Projects\\28. OrvizarWeb\\orvizarwebPage\\OrvizarWebPageServer.csproj": {}
   },
   "projects": {
-    "D:\\source\\repos\\OrvizarWebPageServer\\OrvizarWebPageServer.csproj": {
+    "D:\\01.Projects\\28. OrvizarWeb\\orvizarwebPage\\OrvizarWebPageServer.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\source\\repos\\OrvizarWebPageServer\\OrvizarWebPageServer.csproj",
+        "projectUniqueName": "D:\\01.Projects\\28. OrvizarWeb\\orvizarwebPage\\OrvizarWebPageServer.csproj",
         "projectName": "OrvizarWebPageServer",
-        "projectPath": "D:\\source\\repos\\OrvizarWebPageServer\\OrvizarWebPageServer.csproj",
-        "packagesPath": "C:\\Users\\paul\\.nuget\\packages\\",
-        "outputPath": "D:\\source\\repos\\OrvizarWebPageServer\\obj\\",
+        "projectPath": "D:\\01.Projects\\28. OrvizarWeb\\orvizarwebPage\\OrvizarWebPageServer.csproj",
+        "packagesPath": "C:\\Users\\E100_AR VR\\.nuget\\packages\\",
+        "outputPath": "D:\\01.Projects\\28. OrvizarWeb\\orvizarwebPage\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Microsoft\\Xamarin\\NuGet\\"
+          "C:\\Microsoft\\Xamarin\\NuGet\\",
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\paul\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\E100_AR VR\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
